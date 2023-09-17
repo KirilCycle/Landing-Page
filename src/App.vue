@@ -2,15 +2,15 @@
   <div>
     <top-navbar></top-navbar>
     <router-view></router-view>
-    <bottom-footer></bottom-footer>
+    <!-- <bottom-footer></bottom-footer> -->
   </div>
 </template>
 
 <script>
-import TopNavbar from "../src/components/TopNavbar/TopNavbar.vue";
-import BottomFooter from "./components/BottomFooter/BottomFooter.vue";
+import TopNavbar from "../src/components/Menu/TopNavbar.vue";
+// import BottomFooter from "./components/BottomFooter/BottomFooter.vue";
 export default {
-  components: { TopNavbar,BottomFooter },
+  components: { TopNavbar },
   name: "App",
 };
 </script>

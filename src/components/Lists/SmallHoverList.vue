@@ -29,6 +29,7 @@ export default {
 }
 .btn-list {
   padding-left: 10px;
+  background-color: white;
   position: absolute;
   z-index: 3;
   box-sizing: border-box;

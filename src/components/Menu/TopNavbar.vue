@@ -20,13 +20,13 @@
             <p class="btn-text">Download</p>
           </main-button>
 
-          <div class="sus">
+          <div class="download-list-wrap">
             <small-hover-list :items="downloadList"></small-hover-list>
           </div>
         </div>
         <div class="language-settings">
           <div class="language-settings-info">
-            <p class="selected-lang">{{this.selectedLeng}}</p>
+            <p class="selected-lang">{{ this.selectedLeng }}</p>
             <div class="svg-arrow-wrap">
               <arrow-svg :h="24" :w="24" class="svg-arrow"></arrow-svg>
             </div>
@@ -36,6 +36,13 @@
           </div>
         </div>
       </div>
+      <button @click="handleMenu" class="menu-btn">
+        <span></span>
+        <span></span>
+      </button>
+      <Teleport to="body">
+          <mobile-menu :active="menuActive" @hide="handleMenu" ></mobile-menu>
+      </Teleport>
     </div>
   </div>
 </template>
@@ -43,8 +50,9 @@
 <script>
 import ArrowSvg from "../../svg/ArrowSvg.vue";
 import SmallHoverList from "../Lists/SmallHoverList.vue";
+import MobileMenu from "./MobileMenu.vue";
 export default {
-  components: { SmallHoverList, ArrowSvg },
+  components: { SmallHoverList, ArrowSvg, MobileMenu},
   name: "top-navbar",
   data() {
     return {
@@ -89,35 +97,39 @@ export default {
         {
           text: "Sverige",
           ico: "sweden.png",
-          handleClick: () => { this.selectedLeng = 'Svr'}
+          handleClick: () => {
+            this.selectedLeng = "Svr";
+          },
         },
         {
           text: "English",
           ico: "UK2.png",
-          handleClick: () => { this.selectedLeng = 'Eng'}
+          handleClick: () => {
+            this.selectedLeng = "Eng";
+          },
         },
       ],
       downoadListShow: false,
-      selectedLeng: 'Eng',
+      selectedLeng: "Eng",
+      menuActive: false
     };
   },
   methods: {
     showDownloadList() {
-    this.downoadListShow = true; // Correct the variable name
-  }
-  }
+      this.downoadListShow = true; // Correct the variable name
+    },
+    handleMenu() {
+      this.menuActive = !this.menuActive;
+      console.log(this.menuActive, 'AAAAA')
+    }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/variables.scss";
 
-.sus {
-  visibility:hidden;
-}
-.sus:hover {
-  visibility: visible;
-}
+
 
 .navbar-wrap {
   width: 100%;
@@ -125,10 +137,14 @@ export default {
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+  background-color: #fff;
 }
 
 .navbar {
-  max-width:$max-content-wrap-width ;
+  max-width: $max-content-wrap-width;
   margin: 0% auto;
   height: 100%;
   box-sizing: border-box;
@@ -148,18 +164,14 @@ export default {
     width: auto;
   }
 
+  .download-list-wrap {
+    visibility: hidden;
+  }
   .download-btn-wrap:hover {
-    .sus {
-      visibility: visible ;
+    .download-list-wrap {
+      visibility: visible;
     }
   }
-
-  .download-btn-list {
-    width: 100%;
-  }
-
- 
-
   .download-btn {
     padding: 12px 39.5px 12px 39.5px;
   }
@@ -202,14 +214,12 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .svg-arrow {
   transition: transform 0.2s ease;
   transform: rotate(-90deg);
 }
-
 
 .language-settings:hover {
   .language-list-wrap {
@@ -230,7 +240,6 @@ export default {
     display: flex;
     align-items: center;
   }
-
 
   .language-list-wrap {
     display: block;
@@ -257,10 +266,42 @@ export default {
   }
 }
 
-@media (max-width: 1100px) {
-  .navbar-wrap {
-    display: none;
+.menu-btn {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 5px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  span {
+    width: 36px;
+    height: 4px;
+    background-color: $purple1;
+    border-radius: 2px;
   }
 }
 
+
+
+@media (max-width: 920px) {
+
+  .navbar-wrap {
+    height: 60px;
+  }
+  .content {
+    display: none;
+  }
+  .menu-btn {
+    display: flex;
+  }
+
+  .logo-container {
+    .logo-header {
+      font-size: 32px;
+    }
+  }
+}
 </style>
