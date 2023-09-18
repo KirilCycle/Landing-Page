@@ -8,7 +8,7 @@
           <div class="text-section">
             <h1 class="text-section-banner-header">
               Strong for life with us
-             <decorative-line :bottom="'-21px'"/>
+              <decorative-line :bottom="'-21px'" />
             </h1>
             <p class="text-section-banner-text">
               The best Pre/postnatal fitness app! 100 exercises divided in
@@ -21,7 +21,7 @@
             </div>
           </div>
 
-          <div class="banner-perfomance-section">
+          <div class="banner-iphone-section">
             <div class="main-image-wrap">
               <img src="@/assets/iPhone12Pro.png" />
 
@@ -99,7 +99,7 @@ export default {
 }
 
 .banner-wrap {
-  width: 100%;
+  width: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,16 +129,13 @@ export default {
   .text-section {
     max-width: 501px;
     height: 339.95px;
+    max-height: 500px;
 
     .text-section-banner-header {
       color: $dark-text;
       line-height: $line-height;
       position: relative;
-
-
     }
-
-
 
     .text-section-banner-text {
       font-size: $font-sx-m;
@@ -150,27 +147,35 @@ export default {
     .mobile-store-badge-wrap {
       cursor: pointer;
       margin-top: $spacing2;
-      width: min-content;
+      width: max-content;
+      justify-content: space-between;
       display: flex;
       flex-direction: row;
       height: min-content;
 
+      svg + svg {
+        margin-left: 40px;
+      }
+
       svg {
-        margin-right: 40px;
+        max-width: 170px;
       }
     }
   }
-
-  .banner-perfomance-section {
+  .banner-iphone-section {
     max-width: 537.64px;
     position: relative;
+
     height: 713.01px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
 
     img {
-      filter: drop-shadow(0px 8px 34px  rgba(0, 0, 0, 0.433));
+      filter: drop-shadow(0px 8px 34px rgba(0, 0, 0, 0.433));
+    }
+    .mobile-store-badge-wrap {
+      display: none;
     }
 
     .second-content {
@@ -214,4 +219,321 @@ export default {
     }
   }
 }
+
+@media (max-width: 1250px) {
+  .banner-wrap {
+    margin-top: 30px;
+  }
+  .banner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .banner-wrap {
+    max-height: 650px;
+  }
+  .banner {
+    .banner-content {
+      padding: 140px 90px 140px 90px;
+      max-height: 550px;
+    }
+
+    .text-section {
+      .text-section-banner-text {
+        font-size: $font-sx-m - 2;
+        padding-right: 20px;
+        box-sizing: border-box;
+        line-height: $line-height-2 - 2;
+      }
+      .text-section-banner-header {
+        line-height: $line-height -2;
+        font-size: $font-sz-l - 3;
+      }
+    }
+    .banner-iphone-section {
+      img {
+        width: 315px;
+      }
+      .second-content {
+        max-width: 400px;
+        right: 0%;
+        top: 67%;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .banner-wrap {
+    max-height: 600px;
+  }
+  .banner {
+    .banner-content {
+      padding: 175px 65px 175px 65px;
+
+      .mobile-store-badge-wrap {
+        margin-top: $spacing2 - 25;
+        width: 320px;
+      }
+    }
+    .banner-iphone-section {
+      img {
+        width: 280px;
+      }
+      .second-content {
+        display: none;
+      }
+    }
+
+    .text-section {
+      .text-section-banner-text {
+        font-size: $font-sx-m - 5;
+        margin-top: 24px;
+        line-height: $line-height-2 - 5;
+      }
+      .text-section-banner-header {
+        line-height: $line-height -5;
+        font-size: $font-sz-l - 6;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .banner-wrap {
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 820px) {
+  .banner {
+    .banner-content {
+      padding: 195px 50px 195px 50px;
+    }
+    .banner-iphone-section {
+      img {
+        width: 250px;
+      }
+    }
+
+    .text-section {
+      .text-section-banner-header {
+        line-height: $line-height -9;
+        font-size: $font-sz-l - 10;
+      }
+      .text-section-banner-text {
+        font-size: $font-sx-m - 5;
+        margin-top: 24px;
+        line-height: $line-height-2 - 8;
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .banner-wrap {
+    max-height: 430px;
+  }
+  .banner {
+    .banner-content {
+      padding: 220px 40px 220px 40px;
+    }
+    .banner-iphone-section {
+      img {
+        width: 230px;
+      }
+    }
+
+    .text-section {
+      .text-section-banner-header {
+        line-height: 50px;
+        font-size: $font-sz-l - 12;
+      }
+      .text-section-banner-text {
+        font-size: $font-sx-m - 6;
+        margin-top: 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: 675px) {
+  .banner-wrap {
+    max-height: 350px;
+  }
+
+  .banner {
+    .banner-content {
+      padding: 230px 35px 230px 35px;
+      .mobile-store-badge-wrap {
+        width: 280px;
+        svg + svg {
+          margin-left: 10px;
+        }
+      }
+    }
+    .banner-iphone-section {
+      max-width: 100%;
+      img {
+        width: 190px;
+      }
+    }
+
+    .text-section {
+      .text-section-banner-header {
+        line-height: 45px;
+        font-size: $font-sz-l - 17;
+      }
+      .text-section-banner-text {
+        font-size: $font-sx-m - 7;
+        line-height: 23px;
+        margin-top: 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .banner-wrap {
+    width: 100vw;
+    .banner-svg-card {
+      display: none;
+    }
+    .banner {
+ 
+      .banner-content {
+        padding: 230px 10px 230px 10px;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        .mobile-store-badge-wrap {
+          position: absolute;
+          right: 40px;
+          width: max-content;
+          display: flex;
+          top: 140%;
+          flex-direction: column;
+        }
+        svg {
+          width: 300px;
+        }
+        svg + svg {
+          margin-top: 20px;
+          margin-left: 0px;
+        }
+      }
+      .banner-iphone-section {
+        margin-top: 25px;
+        width: 100%;
+        min-height: 400px;
+        display: flex;
+        justify-content: start;
+        position: relative;
+        flex-direction: row;
+
+        img {
+          width: 210px;
+          filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.544));
+        }
+      }
+
+      .text-section {
+        position: relative;
+
+        .text-section-banner-header {
+          line-height: 55px;
+          font-size: $font-sz-l - 5;
+          padding: 0px;
+        }
+        .text-section-banner-text {
+          padding: 0px;
+          font-size: 24px;
+          line-height: 32px;
+          margin-top: 30px;
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 456px) {
+  .banner-wrap {
+    .banner {
+      .banner-iphone-section {
+        img {
+          width: 170px;
+        }
+      }
+      .text-section {
+        .text-section-banner-header {
+          line-height: 45px;
+          font-size: $font-sz-l - 10;
+        }
+        .text-section-banner-text {
+          font-size: 18px;
+          line-height: 22px;
+        }
+        .mobile-store-badge-wrap {
+          right: 10px;
+        }
+        svg {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 356px) {
+  .banner-wrap {
+    .banner {
+      .banner-iphone-section {
+        img {
+          width: 150px;
+        }
+      }
+      .text-section {
+        .mobile-store-badge-wrap {
+          right: 5px;
+        }
+        svg {
+          width: 150px;
+        }
+        .text-section-banner-header {
+          line-height: 38px;
+          font-size:40px;
+        }
+        .text-section-banner-text {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 332px) {
+  .banner-wrap {
+    .banner {
+      .banner-iphone-section {
+        img {
+          width: 150px;
+        }
+      }
+      .text-section {
+        .mobile-store-badge-wrap {
+          right: 5px;
+        }
+        svg {
+          width: 130px;
+        }
+      }
+    }
+  }
+}
+
+
 </style>

@@ -268,15 +268,17 @@ export default {
 
 .menu-btn {
   display: none;
+  cursor: pointer;
   width: 46px;
   height: 46px;
   border-radius: 5px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+
 
   span {
+    margin-top:  8px;
     width: 36px;
     height: 4px;
     background-color: $purple1;
