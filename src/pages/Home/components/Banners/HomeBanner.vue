@@ -2,7 +2,6 @@
   <div class="banner-wrap">
     <div class="banner">
       <banner-svg class="banner-svg-card" />
-
       <div class="content">
         <div class="banner-content">
           <div class="text-section">
@@ -99,7 +98,7 @@ export default {
 }
 
 .banner-wrap {
-  width: 100;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,7 +321,7 @@ export default {
     .text-section {
       .text-section-banner-header {
         line-height: $line-height -9;
-        font-size: $font-sz-l - 10;
+        font-size: $font-sz-l - 8;
       }
       .text-section-banner-text {
         font-size: $font-sx-m - 5;
@@ -339,7 +338,7 @@ export default {
   }
   .banner {
     .banner-content {
-      padding: 220px 40px 220px 40px;
+      padding: 220px 40px 0px 40px;
     }
     .banner-iphone-section {
       img {
@@ -362,12 +361,16 @@ export default {
 
 @media (max-width: 675px) {
   .banner-wrap {
-    max-height: 350px;
+    display: flex;
+    align-items: start;
+  }
+  .banner-svg-card {
+    margin-top: -220px;
   }
 
   .banner {
     .banner-content {
-      padding: 230px 35px 230px 35px;
+      padding: 20px 35px 0px 35px;
       .mobile-store-badge-wrap {
         width: 280px;
         svg + svg {
@@ -385,7 +388,7 @@ export default {
     .text-section {
       .text-section-banner-header {
         line-height: 45px;
-        font-size: $font-sz-l - 17;
+        font-size: $font-sz-l - 14;
       }
       .text-section-banner-text {
         font-size: $font-sx-m - 7;
@@ -399,13 +402,14 @@ export default {
 @media (max-width: 600px) {
   .banner-wrap {
     width: 100vw;
+    min-height: 800px;
     .banner-svg-card {
       display: none;
     }
     .banner {
  
       .banner-content {
-        padding: 230px 10px 230px 10px;
+        padding: 0px 10px 0px 10px;
         flex-direction: column;
         width: 100%;
         box-sizing: border-box;
@@ -490,6 +494,9 @@ export default {
 
 @media (max-width: 356px) {
   .banner-wrap {
+    max-height: 700px;
+    min-height: 700px;
+    height: 700px;
     .banner {
       .banner-iphone-section {
         img {

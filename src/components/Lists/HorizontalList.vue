@@ -35,7 +35,6 @@ export default {
   justify-content: center;
   max-width: 596px;
   height: 100%;
- 
 
   .ico-wrap {
     width: 56px;
@@ -47,7 +46,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
 
   .text-wrap {
@@ -60,9 +58,7 @@ export default {
       font-weight: 500;
       line-height: 39px;
       letter-spacing: 0em;
-    
     }
-
 
     .description {
       font-size: $font-sz-sm;
@@ -74,4 +70,73 @@ export default {
     }
   }
 }
+
+@media (max-width: 1115px) {
+  .item + .item {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 921px) {
+
+  .item {
+    justify-content:start;
+  } 
+  .item + .item {
+    margin-left: 0px;
+    margin-top: 50px;
+  }
+  .list {
+    flex-direction: column;
+
+    .text-wrap {
+      margin-left: 10px;
+      .title {
+        font-size: $font-sz-l4 - 5;
+        font-weight: 500;
+        line-height: 33px;
+      }
+
+      .description {
+        font-size: 15px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 556px) {
+  .item {
+    .text-wrap {
+      .title {
+        font-size: $font-sz-l4 - 7;
+        line-height: 32px;
+      }
+  
+      .description {
+        font-size: $font-sz-sm;
+        line-height: 28px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+@media (max-width: 456px) {
+  .item {
+    .text-wrap {
+      .title {
+        font-size: $font-sz-l4 - 10;
+        line-height: 27px;
+      }
+  
+      .description {
+        font-size: $font-sz-sm - 3;
+        line-height: 23px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+
 </style>
