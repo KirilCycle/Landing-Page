@@ -68,7 +68,7 @@ export default {
   width: 100%;
 }
 
-@media (max-width: 1115px) {
+@media (max-width: 1215px) {
   .info-block-wrap {
     padding-left: 10px;
     padding-right: 10px;

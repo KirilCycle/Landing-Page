@@ -3,22 +3,22 @@
     <div class="wrap">
       <home-banner />
       <info-block />
-      <!-- <before-and-during-pregnancy />
-      <blog-posts />
+      <before-and-during-pregnancy />
+      <!-- <blog-posts />
       <send-your-data-banner/> -->
     </div>
   </div>
 </template>
 
 <script>
-// import BeforeAndDuringPregnancy from "./components/BeforeAndDuringPregnancy/BeforeAndDuringPregnancy.vue";
+import BeforeAndDuringPregnancy from "./components/BeforeAndDuringPregnancy/BeforeAndDuringPregnancy.vue";
 // import BlogPosts from "./components/BlogPosts/BlogPosts.vue";
 import HomeBanner from "./components/Banners/HomeBanner.vue";
 import InfoBlock from "./components/InfoBlock/InfoBlock.vue";
 // import SendYourDataBanner from "./components/Banners/SendYourDataBanner.vue";
 export default {
   // components: { HomeBanner,SendYourDataBanner, InfoBlock, BeforeAndDuringPregnancy,BlogPosts },
-  components: { HomeBanner,InfoBlock }
+  components: { HomeBanner,InfoBlock,BeforeAndDuringPregnancy }
 };
 </script>
 
@@ -30,11 +30,11 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 100px;
   width: 100%;
 }
 
 .wrap {
-  padding-top: 100px;
   position: relative;
   display: flex;
   flex-direction: column;

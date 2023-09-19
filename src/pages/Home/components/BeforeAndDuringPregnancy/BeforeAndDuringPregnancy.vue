@@ -6,75 +6,65 @@
         The app is divided into three different stages to help you choose
         appropriate exercises. Each exercise is carefully selected to ensure
         safe and appropriate adjustments to follow the pregnancy’s progress.
-        <decorative-line :center="true"/>
+        <decorative-line :center="true" />
       </p>
     </div>
 
     <div class="main-content-section">
- 
       <div class="background-text">
         <healthy-svg></healthy-svg>
       </div>
 
-      <div class="section">
-        <div class="text-section-container">
-          <div class="top-text-block">
-            <text-section :title="'Before pregnancy'">
-              Start preparing for pregnancy with safe exercises that build up a
-              strong body.
-            </text-section>
-            <div class="top-text-block-trimsters-info">
-              <h4>Trimesters</h4>
-              <p>
-                The pregnancy is divided into first trimester, second trimester
-                part 1 and 2, and third trimester part 1 and 2 to provide
-                exercises that are safe for each stage of the pregnancy. Each
-                exercise comes with a video and a description so you can safely
-                perform each exercise. Simple put in your due date and you will
-                be taken to the proper stage.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="card-section-container right-card">
-          <div class="card-section-svg-wrap">
-            <square-wavy-card></square-wavy-card>
-          </div>
+
+      <info-section
+        :title="'Before pregnancy'"
+        :text="`Start preparing for pregnancy with safe exercises that build up a strong body.`"
+        :additionalData="{
+          text: ` The pregnancy is divided into first trimester, second trimester
+        part 1 and 2, and third trimester part 1 and 2 to provide
+        exercises that are safe for each stage of the pregnancy. Each
+        exercise comes with a video and a description so you can safely
+        perform each exercise. Simple put in your due date and you will
+        be taken to the proper stage.`,
+          header: 'Trimesters',
+        }"
+      >
+        <template v-slot:svgBackground>
+          <square-wavy-card></square-wavy-card>
+        </template>
+        <template v-slot:midImg>
           <img class="card-image" src="@/assets/iPhone12ProActivities.png" />
-        </div>
-      </div>
-      <div class="section">
-        <div class="card-section-container">
-          <div class="card-section-svg-wrap">
-            <second-square-wavy-card-svg></second-square-wavy-card-svg>
-          </div>
+        </template>
+      </info-section>
+
+      <info-section :title="`During pregnancy`" :text="'Working out during pregnancy has many benefits for both the mom and the baby. It can reduce back pain, help prevent gestational diabetes, promote good posture, strength and endurance, and also improve the ability to cope with labor.'" :switch="true">
+        <template v-slot:svgBackground>
+          <second-square-wavy-card-svg></second-square-wavy-card-svg>
+        </template>
+        <template v-slot:midImg>
           <img
             class="card-image"
             src="@/assets/iPhone12ProActivitiesRotated.png"
           />
-        </div>
-        <div class="text-section-container left-card">
-          <div class="top-text-block">
-            <text-section :title="'During pregnancy'">
-              Working out during pregnancy has many benefits for both the mom
-              and the baby. It can reduce back pain, help prevent gestational
-              diabetes, promote good posture, strength and endurance, and also
-              improve the ability to cope with labor.
-            </text-section>
-          </div>
-        </div>
-      </div>
+        </template>
+      </info-section>
+      <!-- <info-section></info-section> -->
     </div>
   </div>
 </template>
 
 <script>
-import HealthySvg from '../../../../svg/HealthySvg.vue';
+import HealthySvg from "../../../../svg/HealthySvg.vue";
 import SecondSquareWavyCardSvg from "../../../../svg/SecondSquareWavyCardSvg.vue";
 import SquareWavyCard from "../../../../svg/SquareWavyCardSvg.vue";
-import TextSection from "./TextSection.vue";
+import InfoSection from "./InfoSection.vue";
 export default {
-  components: { TextSection, SquareWavyCard, SecondSquareWavyCardSvg, HealthySvg },
+  components: {
+    SquareWavyCard,
+    SecondSquareWavyCardSvg,
+    HealthySvg,
+    InfoSection,
+  },
 };
 </script>
 
@@ -180,10 +170,10 @@ export default {
       width: 546px;
       height: 546px;
     }
-
-    .card-image {
-      position: absolute;
-    }
   }
+}
+
+.card-image {
+  position: absolute;
 }
 </style>
