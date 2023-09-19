@@ -38,4 +38,10 @@ export default {
   line-height: $line-height-5;
 }
 
+@media (max-width: 950px) {
+  .header {
+    font-size: 31px;
+  }
+}
+
 </style>

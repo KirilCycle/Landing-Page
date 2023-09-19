@@ -18,7 +18,7 @@ import InfoBlock from "./components/InfoBlock/InfoBlock.vue";
 // import SendYourDataBanner from "./components/Banners/SendYourDataBanner.vue";
 export default {
   // components: { HomeBanner,SendYourDataBanner, InfoBlock, BeforeAndDuringPregnancy,BlogPosts },
-  components: { HomeBanner,InfoBlock,BeforeAndDuringPregnancy }
+  components: { HomeBanner,InfoBlock, BeforeAndDuringPregnancy }
 };
 </script>
 
