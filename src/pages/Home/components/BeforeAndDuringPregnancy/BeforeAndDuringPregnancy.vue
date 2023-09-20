@@ -29,7 +29,7 @@
         </template>
       </info-section>
       <div class="section-spacing"></div>
-      <!-- <info-section :title="`During pregnancy`" :text="'Working out during pregnancy has many benefits for both the mom and the baby. It can reduce back pain, help prevent gestational diabetes, promote good posture, strength and endurance, and also improve the ability to cope with labor.'" :switch="true">
+      <info-section :title="`During pregnancy`" :text="'Working out during pregnancy has many benefits for both the mom and the baby. It can reduce back pain, help prevent gestational diabetes, promote good posture, strength and endurance, and also improve the ability to cope with labor.'" :switch="true">
         <template v-slot:svgBackground>
           <second-square-wavy-card-svg></second-square-wavy-card-svg>
         </template>
@@ -39,20 +39,20 @@
             src="@/assets/iPhone12ProActivitiesRotated.png"
           />
         </template>
-      </info-section> -->
+      </info-section>
     </div>
   </div>
 </template>
 
 <script>
 import HealthySvg from "../../../../svg/HealthySvg.vue";
-// import SecondSquareWavyCardSvg from "../../../../svg/SecondSquareWavyCardSvg.vue";
+import SecondSquareWavyCardSvg from "../../../../svg/SecondSquareWavyCardSvg.vue";
 import SquareWavyCard from "../../../../svg/SquareWavyCardSvg.vue";
 import InfoSection from "./InfoSection.vue";
 export default {
   components: {
     SquareWavyCard,
-    // SecondSquareWavyCardSvg,
+    SecondSquareWavyCardSvg,
     HealthySvg,
     InfoSection,
   },
@@ -71,7 +71,7 @@ export default {
   position: relative;
 }
 .section-spacing {
-  height: 38px;
+  height: 90px;
 }
 .background-text {
   position: absolute;
