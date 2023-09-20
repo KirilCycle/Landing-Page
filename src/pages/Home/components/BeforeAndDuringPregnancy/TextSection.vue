@@ -40,7 +40,43 @@ export default {
 
 @media (max-width: 950px) {
   .header {
+    font-size: 37px;
+    line-height: 33px;
+  }
+
+  .text {
+    margin-top: 33px;
+  }
+}
+@media (max-width: 860px) {
+  .text {
+    margin-top: 24px;
+  }
+  .header {
+    font-size: 32px;
+    line-height: 33px;
+  }
+}
+@media (max-width: 779px) {
+  .header {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .text {
+    margin-top: 35px;
+  } 
+}
+@media (max-width: 534px) {
+  .header {
+    font-size: 35px;
+    line-height: 35px;
+  }
+}
+@media (max-width: 394px) {
+  .header {
     font-size: 31px;
+    line-height: 31px;
   }
 }
 

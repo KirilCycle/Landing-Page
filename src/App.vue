@@ -36,6 +36,8 @@ h2 {
   color: $dark-text;
 }
 
+
+
 h3 {
   margin: 0%;
   font-weight: 700;

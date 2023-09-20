@@ -89,7 +89,7 @@ export default {
   }
 }
 
-@media (max-width: 556px) {
+@media (max-width: 534px) {
   .header {
     font-size: 35px;
   }

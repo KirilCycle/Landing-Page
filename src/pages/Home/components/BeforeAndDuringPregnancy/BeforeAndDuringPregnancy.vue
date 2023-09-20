@@ -29,7 +29,11 @@
         </template>
       </info-section>
       <div class="section-spacing"></div>
-      <info-section :title="`During pregnancy`" :text="'Working out during pregnancy has many benefits for both the mom and the baby. It can reduce back pain, help prevent gestational diabetes, promote good posture, strength and endurance, and also improve the ability to cope with labor.'" :switch="true">
+      <info-section
+        :title="`During pregnancy`"
+        :text="'Working out during pregnancy has many benefits for both the mom and the baby. It can reduce back pain, help prevent gestational diabetes, promote good posture, strength and endurance, and also improve the ability to cope with labor.'"
+        :switch="true"
+      >
         <template v-slot:svgBackground>
           <second-square-wavy-card-svg></second-square-wavy-card-svg>
         </template>
@@ -68,26 +72,26 @@ export default {
   align-items: center;
   justify-content: center;
   max-width: 1243.5px;
+  width: 100%;
   position: relative;
 }
 .section-spacing {
-  height: 90px;
+  height: 99px;
 }
 .background-text {
   position: absolute;
   width: 974px;
   height: 218px;
   right: 0px;
-  top: 969.34px;
+  top: 984px;
+  z-index: -2;
 }
 .intro-container {
   max-width: 1240px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  h1 {
-    line-height: 60.95px;
-  }
+  text-align: center;
 
   .description {
     margin-top: 24px;
@@ -100,8 +104,9 @@ export default {
   }
 }
 .main-content-section {
-  width: 100%;
-  margin-top: 60px;
+  min-width: 100%;
+  margin-top: 163px;
+  overflow: hidden;
 
   .card-section-container {
     height: 100%;
@@ -127,63 +132,113 @@ export default {
   position: relative;
 }
 
-/*
-@media (max-width: 1258px) {
-  .card-image {
-    width: 300px;
-  }
-  .card-image-sec {
-    width: 300px;
-  }
-
-  .section-spacing {
-    height: 30px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .intro-container {
-    height: max-content;
-    text-align: center;
-    h2 {
-      line-height: 59.95px;
-      font-size: 42px;
-    }
-
-    .description {
-      margin-top: 20px;
-      font-size: $font-sz-l4 - 10;
-      font-weight: 500;
-      line-height: 35.01px;
-    }
-  }
-}
-
 @media (max-width: 1050px) {
   .card-image {
-    width: 250px;
+    width: 287px;
   }
-  .card-image-sec {
-    width: 250px;
-  }
-}
 
-@media (max-width: 840px) {
+  .card-image-sec {
+    width: 287px;
+  }
+
   .intro-container {
-    height: max-content;
-    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
     h2 {
-      line-height: 52.95px;
-      font-size: 37px;
+      line-height: 55.95px;
+      font-size: 45px;
     }
 
     .description {
-      margin-top: 14px;
-      font-size: $font-sz-l4 - 14;
-      font-weight: 500;
+      margin-top: 22px;
+      font-size: 25px;
+      line-height: 33.01px;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .section-spacing {
+    height: 75px;
+  }
+  .main-content-section {
+    margin-top: 100px;
+  }
+  .card-image {
+    width: 247px;
+  }
+
+  .card-image-sec {
+    width: 247px;
+  }
+}
+@media (max-width: 921px) {
+  .intro-container {
+    h2 {
+      font-size: 45px;
+    }
+  }
+}
+@media (max-width: 779px) {
+
+  .main-content-section {
+    margin-top: 20px;
+  }
+  .section-spacing {
+    height: 55px;
+  }
+
+  .intro-container {
+    .description {
+      margin-top: 22px;
+      font-size: $font-sz-l4 - 10;
       line-height: 32.01px;
     }
   }
+  .card-image-sec {
+    width: 310px;
+  }
+  .card-image {
+    width: 310px;
+  }
 }
-*/
+@media (max-width: 534px) {
+  .intro-container {
+    h2 {
+      font-size: 35px;
+      line-height: 37px;
+    }
+    .description {
+      font-size: 16px;
+      line-height: 17px;
+    }
+  }
+  .card-image-sec {
+    width: 245px;
+  }
+  .card-image {
+    width: 245px;
+  }
+}
+@media (max-width: 424px) {
+  .intro-container {
+    h2 {
+      font-size: 27px;
+      line-height: 26px;
+    }
+  }
+  .card-image-sec {
+    width: 210px;
+  }
+  .card-image {
+    width: 210px;
+  }
+}
+@media (max-width: 394px) {
+  .card-image-sec {
+    width: 179px;
+  }
+  .card-image {
+    width: 179px;
+  }
+}
 </style>
