@@ -4,21 +4,21 @@
       <home-banner />
       <info-block />
       <before-and-during-pregnancy />
-      <!-- <blog-posts />
-      <send-your-data-banner/> -->
+      <blog-posts />
+      <!-- <send-your-data-banner/> -->
     </div>
   </div>
 </template>
 
 <script>
 import BeforeAndDuringPregnancy from "./components/BeforeAndDuringPregnancy/BeforeAndDuringPregnancy.vue";
-// import BlogPosts from "./components/BlogPosts/BlogPosts.vue";
+import BlogPosts from "./components/BlogPosts/BlogPosts.vue";
 import HomeBanner from "./components/Banners/HomeBanner.vue";
 import InfoBlock from "./components/InfoBlock/InfoBlock.vue";
 // import SendYourDataBanner from "./components/Banners/SendYourDataBanner.vue";
 export default {
   // components: { HomeBanner,SendYourDataBanner, InfoBlock, BeforeAndDuringPregnancy,BlogPosts },
-  components: { HomeBanner,InfoBlock, BeforeAndDuringPregnancy }
+  components: { HomeBanner,InfoBlock, BeforeAndDuringPregnancy,BlogPosts }
 };
 </script>
 
