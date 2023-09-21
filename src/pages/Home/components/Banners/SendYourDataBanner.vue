@@ -1,5 +1,5 @@
 <template>
-  <div class="banner-wrap">
+  <div class="send-data-banner-wrap">
     <div class="space1"></div>
     <button-banner
       @click="navigateToAnotherPage"
@@ -24,12 +24,26 @@ export default {
 
 <style lang="scss" scoped>
 
+.send-data-banner-wrap {
+  display: block;
+  width: 100%;
+}
+
 .space1 {
     height: 80px;
 }
 
 .space2 {
     height: 160px;
+}
+
+@media (max-width: 1260px) {
+  .banner-wrap {
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    box-sizing: border-box;
+  }
 }
 
 </style>

@@ -1,13 +1,13 @@
 <template>
   <svg
     width="100%"
-    height="262"
+    height="100%"
     viewBox="0 0 1240 262"
     fill="none"
-    style="border-radius: 14px"
+    style="border-radius: 14px; overflow: hidden;"
     xmlns="http://www.w3.org/2000/svg"
   >
-  <rect width="100%" height="100%" fill="#B7A9DE"/>
+  <rect width="100%" height="100%"  fill="#B7A9DE"/>
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"

@@ -105,7 +105,7 @@ export default {
 .blog-posts-wrap {
   max-width: 1239px;
   width: 100%;
-  height: 819px;
+  height: max-content;
   margin-top: 160px;
   box-sizing: border-box;
 }
@@ -188,8 +188,23 @@ h2 {
     }
   }
 }
-
 @media (max-width: 970px) {
+  .blogs-container {
+    .group-blogs {
+      margin-left: 5px;
+      row-gap: 9px;
+      column-gap: 9px;
+    }
+    .large-blog {
+      margin-right: 5px;
+    }
+    
+
+
+  }
+}
+
+@media (max-width: 770px) {
   .large-blog {
     max-width: 100%;
     width: 100%;
@@ -200,14 +215,20 @@ h2 {
     margin-right: 0px;
   }
   .blogs-container {
-    display: flex;
     flex-direction: column;
     align-items: center;
 
     .group-blogs {
       margin-left: 0px;
+      max-width: 100%;
       width: 100%;
       margin-top: 25px;
+
+      .blog-wrap {
+        width: 48%;
+        max-width: 50%;
+      }
+
     }
   }
 }

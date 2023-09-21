@@ -4,8 +4,8 @@
       <banner-wavy-wide-card-svg></banner-wavy-wide-card-svg>
     </div>
     <div class="banner-content">
-      <h2 class="header">{{header}}</h2>
-      <main-button @click="onClick" class="btn">{{btnText}}</main-button>
+      <h2 class="header">{{ header }}</h2>
+      <main-button @click="onClick" class="btn">{{ btnText }}</main-button>
     </div>
   </div>
 </template>
@@ -15,26 +15,26 @@ import BannerWavyWideCardSvg from "@/svg/BannerWavyWideCardSvg.vue";
 import MainButton from "../UI/MainButton.vue";
 export default {
   components: { BannerWavyWideCardSvg, MainButton },
-  props: ['header','btnText','onClick'],
-
+  props: ["header", "btnText", "onClick"],
 };
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables';
 .banner-wrap {
   max-width: 1240px;
   width: 100%;
   max-height: 262px;
   position: relative;
-  background-color: rgba(202, 191, 232, 1);
   border-radius: 14px;
+  overflow: hidden;
 
   .banner-content {
     width: 100%;
     padding-left: 105px;
     padding-right: 105px;
     box-sizing: border-box;
-    height: 262px;
+    height: 100%;
     top: 0;
     bottom: 0;
     position: absolute;
@@ -58,5 +58,49 @@ export default {
 .card {
   position: relative;
   width: 100%;
+}
+
+@media (max-width: 1100px) {
+  .banner-wrap {
+
+    .header {
+      font-size: $font-sz-l3;
+    }
+    .banner-content {
+      padding-left: 75px;
+      padding-right: 75px;
+      .btn {
+        width: 320px;
+        padding: 0px;
+        height: 55px;
+      }
+    }
+   
+  }
+}
+@media (max-width: 970px) {
+  .banner-wrap {
+    width: 100%;
+    height: 604px;
+    overflow: hidden;
+    margin: 0% auto;
+
+    .header {
+      font-size: $font-sz-l4;
+    }
+    .banner-content {
+      padding-left: 50px;
+      padding-right: 50px;
+      .btn {
+        width: 290px;
+        padding: 0px;
+        height: 45px;
+      }
+    }
+   
+  }
+  .card {
+    min-width: 1240px;
+  }
 }
 </style>
