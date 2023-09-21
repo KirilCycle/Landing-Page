@@ -25,8 +25,10 @@ export default {
 <style lang="scss" scoped>
 
 .send-data-banner-wrap {
-  display: block;
+  position: relative;
+  box-sizing: border-box;
   width: 100%;
+  overflow: hidden;
 }
 
 .space1 {
@@ -38,7 +40,7 @@ export default {
 }
 
 @media (max-width: 1260px) {
-  .banner-wrap {
+  .send-data-banner-wrap{
     padding-left: 10px;
     padding-right: 10px;
     position: relative;

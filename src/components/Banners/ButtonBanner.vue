@@ -20,17 +20,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 .banner-wrap {
   max-width: 1240px;
   width: 100%;
   max-height: 262px;
   position: relative;
+  display: flex;
+  justify-content: center;
   border-radius: 14px;
   overflow: hidden;
 
   .banner-content {
-    width: 100%;
+    width: calc(100% - 20px);
     padding-left: 105px;
     padding-right: 105px;
     box-sizing: border-box;
@@ -41,7 +43,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 3;
+    border-radius: 14px;
 
     .header {
       color: white;
@@ -62,45 +64,96 @@ export default {
 
 @media (max-width: 1100px) {
   .banner-wrap {
-
     .header {
       font-size: $font-sz-l3;
     }
     .banner-content {
-      padding-left: 75px;
-      padding-right: 75px;
+      box-sizing: border-box;
+      padding-left: 4%;
+      padding-right: 4%;
       .btn {
         width: 320px;
         padding: 0px;
         height: 55px;
       }
     }
-   
   }
 }
-@media (max-width: 970px) {
-  .banner-wrap {
-    width: 100%;
-    height: 604px;
-    overflow: hidden;
-    margin: 0% auto;
+@media (max-width: 900px) {
+  .card {
+    min-width: 100%;
+    height: 300px;
+    transform: scale(1, 3);
+  }
 
+  .banner-wrap {
+    overflow: hidden;
+  }
+}
+@media (max-width: 845px) {
+  .banner-wrap {
     .header {
-      font-size: $font-sz-l4;
+      font-size: $font-sz-l3 - 8;
     }
     .banner-content {
-      padding-left: 50px;
-      padding-right: 50px;
+      box-sizing: border-box;
       .btn {
-        width: 290px;
+        width: 250px;
         padding: 0px;
         height: 45px;
       }
     }
-   
+  }
+}
+@media (max-width: 695px) {
+  .banner-wrap {
+    max-height: 800px;
   }
   .card {
-    min-width: 1240px;
+    min-width: 100%;
+    height: 500px;
+    transform: scale(2, 5);
+  }
+
+  .banner-wrap {
+    .banner-content {
+      justify-content: center;
+      flex-direction: column;
+
+      .header {
+        font-size: $font-sz-l3;
+        margin-bottom: 15px;
+      }
+
+      .btn {
+        margin-top: 15px;
+        margin: 10px;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .banner-wrap {
+    max-height: 380px;
+    background-color: rebeccapurple;
+  }
+
+  .banner-wrap {
+    .banner-content {
+      .header {
+        font-size: $font-sz-l3 - 5;
+        margin-bottom: 15px;
+      }
+      .btn {
+        width: 280px;
+        padding: 0px;
+        height: 50px;
+      }
+    }
+  }
+  .card {
+    height: 300px;
+    transform: scale(1, 4);
   }
 }
 </style>
