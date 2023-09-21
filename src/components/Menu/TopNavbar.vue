@@ -5,16 +5,7 @@
         <h3 class="logo-header">LOGO</h3>
       </div>
       <div class="content">
-        <ul class="link-list">
-          <router-link
-            v-for="link in this.pageslinklist"
-            :key="link.path"
-            :to="link.path"
-            class="menu-text"
-          >
-            {{ link.title }}
-          </router-link>
-        </ul>
+       <links-list></links-list>
         <div class="download-btn-wrap">
           <main-button class="download-btn">
             <p class="btn-text">Download</p>
@@ -51,8 +42,9 @@
 import ArrowSvg from "../../svg/ArrowSvg.vue";
 import SmallHoverList from "../Lists/SmallHoverList.vue";
 import MobileMenu from "./MobileMenu.vue";
+import LinksList from "./LinksList.vue";
 export default {
-  components: { SmallHoverList, ArrowSvg, MobileMenu},
+  components: { SmallHoverList, ArrowSvg, MobileMenu,LinksList},
   name: "top-navbar",
   data() {
     return {
@@ -139,12 +131,12 @@ export default {
   box-sizing: border-box;
   position: fixed;
   top: 0px;
-  z-index: 10;
+  z-index: 100;
   background-color: #fff;
 }
 
 .navbar {
-  max-width: $max-content-wrap-width;
+  max-width: 1240px;
   margin: 0% auto;
   height: 100%;
   box-sizing: border-box;
@@ -278,15 +270,16 @@ export default {
 
 
   span {
-    margin-top:  8px;
     width: 36px;
     height: 4px;
     background-color: $purple1;
     border-radius: 2px;
   }
+
+  span +  span {
+    margin-top: 8px;
+  }
 }
-
-
 
 @media (max-width: 920px) {
 

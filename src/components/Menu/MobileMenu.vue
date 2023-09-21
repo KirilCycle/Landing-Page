@@ -1,12 +1,15 @@
 <template>
     <div  @click="() => {this.$emit('hide')}" :class="active? 'menu-wrap active': 'menu-wrap'">
         <div @click.stop :class="active? 'menu second-active' : 'menu'" >
+            <links-list @close="() => {this.$emit('hide')}"></links-list>
         </div>
     </div>
 </template>
 
 <script>
+import LinksList from './LinksList.vue'
     export default {
+  components: { LinksList },
         props: ['active']
     }
 </script>
@@ -24,11 +27,11 @@
     transition: background-color 1s ease;
 }
 .menu {
-    width: 310px;
-    height: 100%;
+    width: 90%;
+    height: 120%;
     position: absolute;
-    transform: translateX(100%);
-    right: 0px;
+    transform: translateX(120%);
+    right: -20%;
     background-color: white;
     transition: transform 1s ease;
 }
