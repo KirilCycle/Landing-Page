@@ -151,15 +151,17 @@ export default {
   flex-direction: row;
   align-items: center;
   box-sizing: border-box;
-  padding-right: 15px;
+  padding-right: 20px;
 
   .download-btn-wrap {
     position: relative;
+    margin-left: 9px;
     width: auto;
   }
 
   .download-list-wrap {
     visibility: hidden;
+    width: 174px;
   }
   .download-btn-wrap:hover {
     .download-list-wrap {
@@ -168,7 +170,6 @@ export default {
   }
   .download-btn {
     padding: 12px 40px 12px 40px;
-    margin-left: 9px;
   }
 
   .btn-text {

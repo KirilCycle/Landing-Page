@@ -108,7 +108,6 @@ export default {
 .banner {
   max-width: 1237px;
   width: inherit;
-  margin-top: 60px;
   position: relative;
   height: 817px;
 

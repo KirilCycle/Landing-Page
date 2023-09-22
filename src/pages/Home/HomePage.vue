@@ -52,7 +52,7 @@ export default {
 
 @media (max-width: 920px) {
   .wrap {
-    padding-top: 0px;
+    padding-top: 60px;
   }
 }
 
