@@ -216,6 +216,7 @@ export default {
 .svg-arrow {
   transition: transform 0.2s ease;
   transform: rotate(-90deg);
+  cursor: pointer;
 }
 
 .language-settings:hover {
@@ -283,6 +284,13 @@ export default {
 
   span +  span {
     margin-top: 8px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .language-settings {
+    margin-left: 30px;
   }
 }
 

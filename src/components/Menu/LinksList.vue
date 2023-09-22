@@ -62,6 +62,11 @@ export default {
   margin-right: $spacing3;
   cursor: pointer;
 }
+@media (max-width: 1000px) {
+  .menu-text {
+    margin-right: $spacing3 - 8px;
+  }
+}
 
 @media (max-width: 920px) {
   .link-list {
