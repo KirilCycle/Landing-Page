@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/variables";
 .btn-banner-wrap{
-  max-width: 1240px;
+  max-width: 100%;
   overflow: hidden;
   position: relative;
   width: 100%;

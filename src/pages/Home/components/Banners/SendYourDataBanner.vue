@@ -23,13 +23,15 @@ export default {
 <style lang="scss" scoped>
 
 .send-data-banner-wrap {
-  width: 100vw;
+  max-width: 100%;
   display: flex;
   justify-content: center;
+  overflow: hidden;
   box-sizing: border-box;
   background-color: red;
-  height: max-content;
+  height: min-content;
 }
+
 
 @media (max-width: 1260px) {
   .send-data-banner-wrap {
@@ -37,7 +39,6 @@ export default {
     padding-right: 10px;
   }
 }
-
 
 
 </style>
