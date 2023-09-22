@@ -7,10 +7,10 @@
       <div class="form-content">
         <div class="form-wrap">
           <h2 class="form-header">Send your data</h2>
-          <main-input class="input" placeholder="First Name" v-model="firstName" />
-          <main-input class="input" placeholder="Second Name" v-model="secondName" />
-          <main-input class="input" placeholder="Email" v-model="email" />
-          <main-input class="input" placeholder="Adress" v-model="adress" />
+          <main-input class="form-input" placeholder="First Name" v-model="firstName" />
+          <main-input class="form-input" placeholder="Second Name" v-model="secondName" />
+          <main-input class="form-input" placeholder="Email" v-model="email" />
+          <main-input class="form-input" placeholder="Adress" v-model="adress" />
           <main-button @click="showData" class="submit-btn">Submit</main-button>
         </div>
       </div>
@@ -85,7 +85,7 @@ function showData() {
       flex-direction: column;
     }
     
-    .input {
+    .form-input {
       margin-top: 16px;
     }
     .form-header {
@@ -122,7 +122,6 @@ function showData() {
     padding-top: 70px;
   }
 }
-
 @media (max-width: 500px) {
   .form-page {
     padding-top: 50px;
@@ -134,13 +133,34 @@ function showData() {
         height: 58px;
         margin-top: 21px;
       }
-      .input {
+      .form-input {
         width: 310px;
         margin-top: 13px;
       }
     }
     .form-header {
       font-size: 37px;
+    }
+ 
+   
+  }
+}
+@media (max-width: 387px) {
+  .form{
+    .form-content {
+      .submit-btn {
+        width: 270px;
+        height: 50px;
+        margin-top: 19px;
+      }
+      .form-input {
+        width: 270px;
+        height: 50px;
+        margin-top: 11px;
+      }
+    }
+    .form-header {
+      font-size: 32px;
     }
  
    
