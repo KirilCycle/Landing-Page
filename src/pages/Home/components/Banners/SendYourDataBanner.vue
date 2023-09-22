@@ -1,10 +1,12 @@
 <template>
   <div class="send-data-banner-wrap">
+    <div class="space-1"></div>
     <button-banner
       @click="navigateToAnotherPage"
       :header="'Send your Data'"
       :btnText="'Go to form'"
     ></button-banner>
+    <div class="space-2"></div>
   </div>
 </template>
 
@@ -28,10 +30,16 @@ export default {
   justify-content: center;
   overflow: hidden;
   box-sizing: border-box;
-  background-color: red;
   height: min-content;
+  flex-direction: column;
 }
 
+.space-1 {
+  height: 81px;
+}
+.space-2 {
+  height: 160px;
+}
 
 @media (max-width: 1260px) {
   .send-data-banner-wrap {

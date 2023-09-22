@@ -3,10 +3,10 @@
     <div class="card">
       <banner-wavy-wide-card-svg></banner-wavy-wide-card-svg>
     </div>
-    <!-- <div class="banner-content">
+    <div class="banner-content">
       <h2 class="header">{{ header }}</h2>
       <main-button @click="onClick" class="btn">{{ btnText }}</main-button>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -62,9 +62,8 @@ export default {
   height: 260px;
 }
 
-/*
 @media (max-width: 1100px) {
-  .banner-wrap {
+  .btn-banner-wrap {
     .header {
       font-size: $font-sz-l3;
     }
@@ -80,19 +79,9 @@ export default {
     }
   }
 }
-@media (max-width: 900px) {
-  .card {
-    min-width: 100%;
-    height: 300px;
-    transform: scale(1, 3);
-  }
 
-  .banner-wrap {
-    overflow: hidden;
-  }
-}
 @media (max-width: 845px) {
-  .banner-wrap {
+  .btn-banner-wrap {
     .header {
       font-size: $font-sz-l3 - 8;
     }
@@ -107,16 +96,9 @@ export default {
   }
 }
 @media (max-width: 695px) {
-  .banner-wrap {
-    max-height: 800px;
-  }
-  .card {
-    min-width: 100%;
-    height: 500px;
-    transform: scale(2, 5);
-  }
 
-  .banner-wrap {
+
+  .btn-banner-wrap {
     .banner-content {
       justify-content: center;
       flex-direction: column;
@@ -134,12 +116,8 @@ export default {
   }
 }
 @media (max-width: 500px) {
-  .banner-wrap {
-    max-height: 380px;
-    background-color: rebeccapurple;
-  }
 
-  .banner-wrap {
+  .btn-banner-wrap {
     .banner-content {
       .header {
         font-size: $font-sz-l3 - 5;
@@ -152,10 +130,6 @@ export default {
       }
     }
   }
-  .card {
-    height: 300px;
-    transform: scale(1, 4);
-  }
 }
-*/
+
 </style>
