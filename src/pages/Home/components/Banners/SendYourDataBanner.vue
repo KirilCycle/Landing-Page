@@ -1,12 +1,10 @@
 <template>
   <div class="send-data-banner-wrap">
-    <div class="space1"></div>
     <button-banner
       @click="navigateToAnotherPage"
       :header="'Send your Data'"
       :btnText="'Go to form'"
     ></button-banner>
-    <div class="space2"></div>
   </div>
 </template>
 
@@ -25,27 +23,21 @@ export default {
 <style lang="scss" scoped>
 
 .send-data-banner-wrap {
-  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
-  width: 100%;
-  overflow: hidden;
-}
-
-.space1 {
-    height: 80px;
-}
-
-.space2 {
-    height: 160px;
+  background-color: red;
+  height: max-content;
 }
 
 @media (max-width: 1260px) {
-  .send-data-banner-wrap{
+  .send-data-banner-wrap {
     padding-left: 10px;
     padding-right: 10px;
-    position: relative;
-    box-sizing: border-box;
   }
 }
+
+
 
 </style>

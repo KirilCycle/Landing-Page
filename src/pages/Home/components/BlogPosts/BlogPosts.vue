@@ -162,7 +162,7 @@ h2 {
 @media (max-width: 1261px) {
   .blog-posts-wrap {
     padding-left: 10px;
-    padding: 10px;
+    padding-right: 10px;
   }
 
   .blogs-container {

@@ -1,35 +1,34 @@
 <template>
-  <div class="banner-wrap">
+  <div class="btn-banner-wrap">
     <div class="card">
       <banner-wavy-wide-card-svg></banner-wavy-wide-card-svg>
     </div>
-    <div class="banner-content">
+    <!-- <div class="banner-content">
       <h2 class="header">{{ header }}</h2>
       <main-button @click="onClick" class="btn">{{ btnText }}</main-button>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 import BannerWavyWideCardSvg from "@/svg/BannerWavyWideCardSvg.vue";
-import MainButton from "../UI/MainButton.vue";
 export default {
-  components: { BannerWavyWideCardSvg, MainButton },
+  components: { BannerWavyWideCardSvg },
   props: ["header", "btnText", "onClick"],
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/variables";
-.banner-wrap {
+.btn-banner-wrap{
   max-width: 1240px;
-  width: 100%;
-  max-height: 262px;
+  overflow: hidden;
   position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
+  height: max-content;
   border-radius: 14px;
-  overflow: hidden;
 
   .banner-content {
     width: calc(100% - 20px);
@@ -59,9 +58,11 @@ export default {
 
 .card {
   position: relative;
-  width: 100%;
+  width: 1240px;
+  height: 260px;
 }
 
+/*
 @media (max-width: 1100px) {
   .banner-wrap {
     .header {
@@ -156,4 +157,5 @@ export default {
     transform: scale(1, 4);
   }
 }
+*/
 </style>

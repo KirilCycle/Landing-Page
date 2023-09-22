@@ -78,7 +78,7 @@ button {
 input[type="text"] {
   box-shadow: rgba(0, 0, 0, 0);
   box-shadow: none;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 p {
