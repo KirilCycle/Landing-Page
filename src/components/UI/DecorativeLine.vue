@@ -1,12 +1,12 @@
 <template>
-    <span :style="{bottom,left,right }"  :class="center?'line center' : 'line' ">
+    <span :class="center?'line center' : 'line' ">
     </span>
 </template>
 
 <script>
     export default {
         name:'decorative-line',
-        props: ['center','bottom','left','rigth']
+        props: ['center']
     }
 </script>
 

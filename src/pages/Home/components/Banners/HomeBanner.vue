@@ -7,7 +7,7 @@
           <div class="text-section">
             <h1 class="text-section-banner-header">
               Strong for life with us
-              <decorative-line :bottom="'-21px'" />
+              <decorative-line class="deco-line" />
             </h1>
             <p class="text-section-banner-text">
               The best Pre/postnatal fitness app! 100 exercises divided in
@@ -96,7 +96,9 @@ export default {
   left: 0;
   height: 100%;
 }
-
+.deco-line {
+  bottom: -23px;
+}
 .banner-wrap {
   width: 100%;
   display: flex;
@@ -400,14 +402,21 @@ export default {
 }
 
 @media (max-width: 600px) {
+  .spot-shape-svg {
+    display: block;
+    position: absolute;
+    left: -330px;
+    top: -300px;
+  }
   .banner-wrap {
     width: 100vw;
     min-height: 800px;
+    overflow: hidden;
     .banner-svg-card {
       display: none;
     }
+
     .banner {
- 
       .banner-content {
         padding: 0px 10px 0px 10px;
         flex-direction: column;
@@ -512,7 +521,7 @@ export default {
         }
         .text-section-banner-header {
           line-height: 38px;
-          font-size:40px;
+          font-size: 40px;
         }
         .text-section-banner-text {
           font-size: 18px;
@@ -541,6 +550,4 @@ export default {
     }
   }
 }
-
-
 </style>
