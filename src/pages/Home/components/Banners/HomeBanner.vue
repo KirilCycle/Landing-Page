@@ -101,13 +101,14 @@ export default {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   position: relative;
 }
 
 .banner {
   max-width: 1237px;
   width: inherit;
+  margin-top: 60px;
   position: relative;
   height: 817px;
 
@@ -303,6 +304,7 @@ export default {
 @media (max-width: 920px) {
   .banner-wrap {
     max-height: 500px;
+    margin-top: 0px;
   }
 }
 

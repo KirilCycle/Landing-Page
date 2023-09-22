@@ -76,6 +76,9 @@ export default {
 }
 
 @media (max-width: 921px) {
+  .info-block-wrap {
+    margin-top: 220px;
+  }
   .header {
     font-size: 45px;
   }

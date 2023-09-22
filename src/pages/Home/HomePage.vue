@@ -49,4 +49,11 @@ export default {
   justify-content: center;
   width: 100%;
 }
+
+@media (max-width: 920px) {
+  .wrap {
+    padding-top: 0px;
+  }
+}
+
 </style>

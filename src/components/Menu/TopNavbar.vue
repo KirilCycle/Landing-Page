@@ -151,7 +151,7 @@ export default {
   flex-direction: row;
   align-items: center;
   box-sizing: border-box;
-  padding-right: 5px;
+  padding-right: 15px;
 
   .download-btn-wrap {
     position: relative;
@@ -168,6 +168,7 @@ export default {
   }
   .download-btn {
     padding: 12px 40px 12px 40px;
+    margin-left: 9px;
   }
 
   .btn-text {
@@ -228,7 +229,7 @@ export default {
   position: relative;
   height: inherit;
   width: 50px;
-  margin-left: $spacing3;
+  margin-left: 38px;
 
   .language-settings-info {
     height: 39.5px;
