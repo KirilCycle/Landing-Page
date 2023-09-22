@@ -40,7 +40,7 @@ export default {
 
 .info-block-wrap {
   margin-top: 160px;
-  max-width: 1237px;
+  max-width: 1232px;
   height: min-content;
   width: 100%;
   display: flex;

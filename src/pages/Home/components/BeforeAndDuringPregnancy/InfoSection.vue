@@ -75,7 +75,7 @@ export default {
     margin-left: 90px;
     display: flex;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 35px;
 
     .top-text-block {
       max-width: 498px;
@@ -195,6 +195,12 @@ export default {
 @media (max-width: 634px) {
   .section-def {
     align-items: center;
+  }
+
+  .section-switched {
+    .text-section-container {
+      margin-left: 0px;
+    }
   }
 }
 

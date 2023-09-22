@@ -150,6 +150,8 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  box-sizing: border-box;
+  padding-right: 5px;
 
   .download-btn-wrap {
     position: relative;
@@ -165,7 +167,7 @@ export default {
     }
   }
   .download-btn {
-    padding: 12px 39.5px 12px 39.5px;
+    padding: 12px 40px 12px 40px;
   }
 
   .btn-text {
@@ -181,7 +183,8 @@ export default {
     font-family: "Montserrat", sans-serif;
     color: $purple1;
     font-weight: 700;
-    font-size: $font-sz-l2;
+    font-size: $font-sz-l3;
+    line-height: $line-height-l;
   }
 }
 

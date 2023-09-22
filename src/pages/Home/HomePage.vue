@@ -42,6 +42,7 @@ export default {
 
 .wrap {
   position: relative;
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;

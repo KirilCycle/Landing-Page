@@ -101,14 +101,13 @@ export default {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   position: relative;
 }
 
 .banner {
   max-width: 1237px;
   width: inherit;
-  margin-top: 60px;
   position: relative;
   height: 817px;
 
