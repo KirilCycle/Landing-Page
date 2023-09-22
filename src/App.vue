@@ -73,6 +73,14 @@ button {
   text-align: left;
   text-decoration: none;
 }
+
+
+input[type="text"] {
+  box-shadow: rgba(0, 0, 0, 0);
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
 p {
   margin: 0%;
 }

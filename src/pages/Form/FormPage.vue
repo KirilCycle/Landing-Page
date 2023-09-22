@@ -7,10 +7,10 @@
       <div class="form-content">
         <div class="form-wrap">
           <h2 class="form-header">Send your data</h2>
-          <main-input placeholder="First Name" v-model="firstName" />
-          <main-input placeholder="Second Name" v-model="secondName" />
-          <main-input placeholder="Email" v-model="email" />
-          <main-input placeholder="Adress" v-model="adress" />
+          <main-input class="input" placeholder="First Name" v-model="firstName" />
+          <main-input class="input" placeholder="Second Name" v-model="secondName" />
+          <main-input class="input" placeholder="Email" v-model="email" />
+          <main-input class="input" placeholder="Adress" v-model="adress" />
           <main-button @click="showData" class="submit-btn">Submit</main-button>
         </div>
       </div>
@@ -48,8 +48,9 @@ function showData() {
   width: 100%;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
+  padding-top: 100px;
 }
-
 .form {
   max-width: 1240px;
   overflow: hidden;
@@ -60,6 +61,7 @@ function showData() {
   margin-bottom: 100px;
   height: auto;
   margin-top: 100px;
+  border-radius: 14px;
 
   .form-content {
     position: absolute;
@@ -75,26 +77,29 @@ function showData() {
     max-height: 560px;
 
     .form-wrap {
-      width: 400px;
+      max-width: 400px;
       height: 100%;
       margin: 0% auto;
       display: flex;
       align-items: center;
       flex-direction: column;
-      gap: 16px;
     }
-
+    
+    .input {
+      margin-top: 16px;
+    }
     .form-header {
       line-height: 61px;
       letter-spacing: 0em;
       color: white;
       text-align: center;
+      
     }
 
     .submit-btn {
       width: 392px;
       height: 58px;
-      margin-top: 14px;
+      margin-top: 24px;
     }
   }
 
@@ -104,4 +109,42 @@ function showData() {
     height: 560px;
   }
 }
+
+@media (max-width: 1260px) {
+  .form-page {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 800px) { 
+  .form-page {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 500px) {
+  .form-page {
+    padding-top: 50px;
+  }
+  .form{
+    .form-content {
+      .submit-btn {
+        width: 310px;
+        height: 58px;
+        margin-top: 21px;
+      }
+      .input {
+        width: 310px;
+        margin-top: 13px;
+      }
+    }
+    .form-header {
+      font-size: 37px;
+    }
+ 
+   
+  }
+}
+
 </style>

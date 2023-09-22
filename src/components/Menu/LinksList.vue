@@ -66,7 +66,7 @@ export default {
 @media (max-width: 920px) {
   .link-list {
     box-sizing: border-box;
-    padding: 20px;
+    padding: 20px 0px 0px 20px;
     flex-direction: column;
   }
   .menu-text {
