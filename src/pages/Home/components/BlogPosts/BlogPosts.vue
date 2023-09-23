@@ -79,7 +79,7 @@ export default {
 .large-blog {
   max-width: 604px;
   max-height: 604px;
-  width: 50%;
+  width: 604px;
   height: 100%;
   margin-right: 16px;
 }
@@ -141,24 +141,25 @@ h2 {
     width: 51%;
     align-items: center;
     max-width: 604px;
+    height: max-content;
     margin-left: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 32px;
-    column-gap: 32px;
     box-sizing: border-box;
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-gap: 32px;
+    grid-template-columns: 1fr 1fr;
 
     .blog-wrap {
       overflow: hidden;
       flex-shrink: 1;
       max-width: 286px;
-      flex: 0 0 calc(50%);
+      max-height: 286px;
+      width: 100%;
       box-sizing: border-box;
     }
   }
 }
-
+/*
 @media (max-width: 1261px) {
   .blog-posts-wrap {
     padding-left: 10px;
@@ -203,6 +204,7 @@ h2 {
 
   }
 }
+*/
 
 @media (max-width: 770px) {
   .large-blog {
