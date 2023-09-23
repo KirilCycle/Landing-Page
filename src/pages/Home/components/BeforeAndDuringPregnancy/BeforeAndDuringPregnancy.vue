@@ -137,6 +137,11 @@ export default {
     width: 287px;
   }
 
+  .background-text {
+    width: 674px;
+    height: 150px;
+    top: 845px;
+  }
   .card-image-sec {
     width: 287px;
   }
@@ -167,6 +172,10 @@ export default {
     width: 247px;
   }
 
+  .background-text {
+    width: 604px;
+    height: 130px;
+  }
   .card-image-sec {
     width: 247px;
   }
@@ -179,7 +188,9 @@ export default {
   }
 }
 @media (max-width: 779px) {
-
+  .background-text {
+    display: none;
+  }
   .main-content-section {
     margin-top: 20px;
   }
