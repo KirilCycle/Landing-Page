@@ -131,5 +131,20 @@ export default {
     }
   }
 }
+@media (max-width: 500px) {
+  .btn-banner-wrap {
+    .banner-content {
+      .header {
+        font-size: $font-sz-l3 - 10;
+        margin-bottom: 15px;
+      }
+      .btn {
+        width: 270px;
+        padding: 0px;
+        height: 45px;
+      }
+    }
+  }
+}
 
 </style>
