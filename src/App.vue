@@ -24,14 +24,14 @@ export default {
 
 h1 {
   margin: 0%;
-  font-size: $font-sz-l;
+  font-size: $fz-1;
   font-weight: 700;
   color: $dark-text;
 }
 
 h2 {
   margin: 0%;
-  font-size: $font-sz-l2;
+  font-size: $fz-2;
   font-weight: 700;
   color: $dark-text;
 }
@@ -40,7 +40,7 @@ h3 {
   margin: 0%;
   font-weight: 700;
   color: $dark-text;
-  font-size: $font-sz-l3;
+  font-size: $fz-3;
 }
 
 h4 {

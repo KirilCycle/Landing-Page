@@ -185,7 +185,7 @@ export default {
     font-family: "Montserrat", sans-serif;
     color: $purple1;
     font-weight: 700;
-    font-size: $font-sz-l3;
+    font-size: $fz-3;
     line-height: $line-height-l;
   }
 }

@@ -25,10 +25,6 @@
             :title="blog.title"
           ></blog-item>
         </div>
-        <!-- <div class="blog-wrap"></div>
-        <div class="blog-wrap"></div>
-        <div class="blog-wrap"></div>
-        <div class="blog-wrap"></div> -->
       </div>
     </div>
     <div class="view-more-wrap">
@@ -40,7 +36,6 @@
 </template>
 
 <script>
-// import ShadowImage from "../../../../components/UI/ShadowImage.vue";
 import BlogItem from "./BlogItem.vue";
 export default {
   components: { BlogItem },
@@ -76,7 +71,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/variables";
-$gap: 32px;
+
 .large-blog {
   max-width: 604px;
   max-height: 604px;
@@ -84,7 +79,7 @@ $gap: 32px;
 
 .view-more-wrap {
   width: 100%;
-  margin-top: 32px;
+  margin-top: $gap2;
   display: flex;
   justify-content: center;
 }
@@ -142,11 +137,11 @@ h2 {
     align-items: center;
     max-width: 604px;
     height: max-content;
-    margin-left: $gap;
+    margin-left: $gap2;
     box-sizing: border-box;
     display: grid;
     grid-auto-rows: max-content;
-    grid-gap: $gap;
+    grid-gap: $gap2;
     grid-template-columns: 1fr 1fr;
 
     .blog-wrap {
@@ -184,7 +179,7 @@ h2 {
   .blogs-container {
     .group-blogs {
       margin-left: 20px;
-      grid-gap: 20px;
+      grid-gap: $gap4;
       width: calc(50% - 20px);
     }
   }
@@ -198,7 +193,7 @@ h2 {
   .blogs-container {
     .group-blogs {
       margin-left: 10px;
-      grid-gap: 10px;
+      grid-gap: $gap5;
       width: calc(50% - 10px);
     }
   }
@@ -226,8 +221,8 @@ h2 {
       min-width: 100%;
       min-height: 100%;
       width: 100%;
-      margin-top: 25px;
-      grid-gap: 25px;
+      margin-top: $gap3;
+      grid-gap: $gap3;
       
 
       .blog-wrap {

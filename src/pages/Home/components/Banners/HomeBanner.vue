@@ -259,7 +259,7 @@ export default {
       }
       .text-section-banner-header {
         line-height: $line-height -2;
-        font-size: $font-sz-l - 3;
+        font-size: $fz-1 - 3;
       }
     }
     .banner-iphone-section {
@@ -305,7 +305,7 @@ export default {
       }
       .text-section-banner-header {
         line-height: $line-height -5;
-        font-size: $font-sz-l - 6;
+        font-size: $fz-1 - 6;
         padding-right: 10px;
       }
     }
@@ -333,7 +333,7 @@ export default {
     .text-section {
       .text-section-banner-header {
         line-height: $line-height -9;
-        font-size: $font-sz-l - 8;
+        font-size: $fz-1 - 8;
       }
       .text-section-banner-text {
         font-size: $font-sx-m - 5;
@@ -361,7 +361,7 @@ export default {
     .text-section {
       .text-section-banner-header {
         line-height: 50px;
-        font-size: $font-sz-l - 12;
+        font-size: $fz-1 - 12;
       }
       .text-section-banner-text {
         font-size: $font-sx-m - 6;
@@ -400,7 +400,7 @@ export default {
     .text-section {
       .text-section-banner-header {
         line-height: 45px;
-        font-size: $font-sz-l - 14;
+        font-size: $fz-1 - 14;
       }
       .text-section-banner-text {
         font-size: $font-sx-m - 7;
@@ -479,7 +479,7 @@ export default {
 
         .text-section-banner-header {
           line-height: 55px;
-          font-size: $font-sz-l - 5;
+          font-size: $fz-1 - 5;
           padding: 0px;
         }
         .text-section-banner-text {
@@ -505,7 +505,7 @@ export default {
       .text-section {
         .text-section-banner-header {
           line-height: 45px;
-          font-size: $font-sz-l - 10;
+          font-size: $fz-1 - 10;
         }
         .text-section-banner-text {
           font-size: 18px;

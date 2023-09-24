@@ -65,7 +65,7 @@ export default {
 @media (max-width: 1100px) {
   .btn-banner-wrap {
     .header {
-      font-size: $font-sz-l3;
+      font-size: $fz-3;
     }
     .banner-content {
       box-sizing: border-box;
@@ -83,7 +83,7 @@ export default {
 @media (max-width: 845px) {
   .btn-banner-wrap {
     .header {
-      font-size: $font-sz-l3 - 8;
+      font-size: $fz-3 - 8;
     }
     .banner-content {
       box-sizing: border-box;
@@ -104,7 +104,7 @@ export default {
       flex-direction: column;
 
       .header {
-        font-size: $font-sz-l3;
+        font-size: $fz-3;
         margin-bottom: 15px;
       }
 
@@ -120,7 +120,7 @@ export default {
   .btn-banner-wrap {
     .banner-content {
       .header {
-        font-size: $font-sz-l3 - 5;
+        font-size: $fz-3 - 5;
         margin-bottom: 15px;
       }
       .btn {
@@ -135,7 +135,7 @@ export default {
   .btn-banner-wrap {
     .banner-content {
       .header {
-        font-size: $font-sz-l3 - 10;
+        font-size: $fz-3 - 10;
         margin-bottom: 15px;
       }
       .btn {
