@@ -402,14 +402,8 @@ export default {
 }
 
 @media (max-width: 600px) {
-  .spot-shape-svg {
-    display: block;
-    position: absolute;
-    left: -330px;
-    top: -300px;
-  }
+ 
   .banner-wrap {
-    width: 100vw;
     min-height: 800px;
     overflow: hidden;
     .banner-svg-card {
@@ -427,7 +421,7 @@ export default {
           right: 40px;
           width: max-content;
           display: flex;
-          top: 140%;
+          top: 135%;
           flex-direction: column;
         }
         svg {
