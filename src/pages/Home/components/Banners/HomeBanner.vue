@@ -60,6 +60,13 @@
                   </template>
                 </shadow-image>
               </div>
+
+
+
+            </div>
+            <div class="mobile-store-badge-wrap-mobile">
+              <app-store-badge-svg />
+              <google-play-badge-svg />
             </div>
           </div>
         </div>
@@ -126,6 +133,8 @@ export default {
     z-index: -1;
   }
 
+
+
   .text-section {
     max-width: 501px;
     height: 339.95px;
@@ -143,7 +152,6 @@ export default {
       color: $light-text;
       margin-top: 61px;
     }
-
     .mobile-store-badge-wrap {
       cursor: pointer;
       margin-top: $spacing2;
@@ -165,11 +173,13 @@ export default {
   .banner-iphone-section {
     max-width: 537.64px;
     position: relative;
-
     height: 713.01px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    .mobile-store-badge-wrap-mobile {
+      display: none;
+    }
 
     img {
       filter: drop-shadow(0px 8px 34px rgba(0, 0, 0, 0.433));
@@ -417,15 +427,12 @@ export default {
         width: 100%;
         box-sizing: border-box;
         .mobile-store-badge-wrap {
-          position: absolute;
-          right: 40px;
-          width: max-content;
-          display: flex;
-          top: 135%;
-          flex-direction: column;
+          width: 0px;
+          height: 0px;
+          visibility: hidden;
         }
         svg {
-          width: 300px;
+          width: 85%;
         }
         svg + svg {
           margin-top: 20px;
@@ -435,15 +442,35 @@ export default {
       .banner-iphone-section {
         margin-top: 25px;
         width: 100%;
-        min-height: 400px;
         display: flex;
         justify-content: start;
         position: relative;
+        max-height: max-content;
         flex-direction: row;
+  
+
+        .mobile-store-badge-wrap-mobile {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          width: inherit;
+          flex-shrink: 1;
+          
+        }
+
+        .main-image-wrap {
+          position: relative;
+          height: max-content;
+          width:max-content;
+       
+        }
 
         img {
           width: 210px;
           filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.544));
+          position: relative;
         }
       }
 
@@ -487,9 +514,7 @@ export default {
         .mobile-store-badge-wrap {
           right: 10px;
         }
-        svg {
-          width: 150px;
-        }
+
       }
     }
   }
@@ -510,9 +535,7 @@ export default {
         .mobile-store-badge-wrap {
           right: 5px;
         }
-        svg {
-          width: 150px;
-        }
+
         .text-section-banner-header {
           line-height: 38px;
           font-size: 40px;
@@ -537,9 +560,7 @@ export default {
         .mobile-store-badge-wrap {
           right: 5px;
         }
-        svg {
-          width: 130px;
-        }
+       
       }
     }
   }
