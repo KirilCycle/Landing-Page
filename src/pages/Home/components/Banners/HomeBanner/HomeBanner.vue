@@ -77,9 +77,9 @@
 
 <script>
 import BannerSvg from "@/svg/BannerSvg.vue";
-import GooglePlayBadgeSvg from "../../../../svg/GooglePlayBadgeSvg.vue";
-import AppStoreBadgeSvg from "../../../../svg/AppStoreBadgeSvg.vue";
-import ShadowImage from "../../../../components/UI/ShadowImage.vue";
+import GooglePlayBadgeSvg from "../../../../../svg/GooglePlayBadgeSvg.vue";
+import AppStoreBadgeSvg from "../../../../../svg/AppStoreBadgeSvg.vue";
+import ShadowImage from "../../../../../components/UI/ShadowImage.vue";
 import HeartSvg from "@/svg/HeartSvg.vue";
 export default {
   components: {

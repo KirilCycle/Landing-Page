@@ -112,7 +112,6 @@ export default {
     },
     handleMenu() {
       this.menuActive = !this.menuActive;
-      console.log(this.menuActive, 'AAAAA')
     }
   },
 };

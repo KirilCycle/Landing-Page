@@ -13,9 +13,9 @@
 <script>
 import BeforeAndDuringPregnancy from "./components/BeforeAndDuringPregnancy/BeforeAndDuringPregnancy.vue";
 import BlogPosts from "./components/BlogPosts/BlogPosts.vue";
-import HomeBanner from "./components/Banners/HomeBanner.vue";
+import HomeBanner from "./components/Banners/HomeBanner/HomeBanner.vue";
 import InfoBlock from "./components/InfoBlock/InfoBlock.vue";
-import SendYourDataBanner from "./components/Banners/SendYourDataBanner.vue";
+import SendYourDataBanner from "./components/Banners/SendYourDataBanner/SendYourDataBanner.vue";
 export default {
   components: {
     HomeBanner,
